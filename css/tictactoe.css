@@ -1,0 +1,58 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Itim', cursive;
+  }
+  body{
+    background-image: url("https://crossfitbbros.com/bbros-1/wp-content/uploads/2016/05/black-wall-texture-19.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+  }
+.maindiv{
+    height: 395px;
+    width: 450px;
+    margin: auto;
+    margin-top: 100px ;
+    padding: 0%;
+    display: none;
+}
+.row{
+    height: 133px;
+    background-color: transparent;
+    float: inline-block;
+    text-align: center;
+    font-size: 50px;
+}
+.column:hover{
+    background-color: rgba(255, 255, 255, 0.533);
+    opacity: 0.5px;
+}
+.column{
+    text-align: center;
+    padding: 20px;
+    float: left;
+    width: 33.33%;
+    height: 130px;
+    border: 2px solid green;
+}
+.column:nth-child(1), .column:nth-child(2), .column:nth-child(3) {
+	border-top: none;
+}
+.column:nth-child(1), .column:nth-child(4), .column:nth-child(7) {
+	border-left: none;
+}
+.column:nth-child(3), .column:nth-child(6), .column:nth-child(9) {
+	border-right: none;
+}
+.column:nth-child(7), .column:nth-child(8), .column:nth-child(9) {
+	border-bottom: none;
+}
+.login{
+    margin: auto;
+    text-align: center;
+    border: 1px solid green;
+    margin-top: 80px;
+    width: max-content;
+    padding: 20px;
+    display: block;
+}

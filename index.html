@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login</title>
+   
+    <link href="css/tictactoe.css" rel="stylesheet">
+</head>
+<body>
+        <div class="login">
+            <h1>WELCOME</h1>
+            <h2>Enter players Name: </h2>
+            <h3>Player 1: <input type="text" id="player1"></h3>
+            <h3>Player 2: <input type="text" id="player2"></h3>
+            <button  type="submit" value="submit" style="background-color: green; padding:5px; padding-inline: 30px;" onclick="dellogin()">Start</button>
+        </div>
+        <div class="maindiv" >
+           Player1:<span id="countx">0</span>player2:<span id="countO">0</span>
+            <div class="row">
+                <div class="column" id="0"></div >
+                <div class="column" id="1"></div >
+                <div class="column" id="2"></div >
+                <div class="column" id="3"></div >
+                <div class="column" id="4"></div >
+                <div class="column" id="5"></div >
+                <div class="column" id="6"></div >
+                <div class="column" id="7"></div >
+                <div class="column" id="8"></div >
+            </div>
+            <h3  id="winner"></h3>
+            <button onclick="gameReset()">Reset</button>
+        </div>
+        <script src="js/tictactoe.js"></script>
+</body>
+</html>
