@@ -94,6 +94,7 @@ function gameReset(){
         {
             resetrow[i].innerHTML = "";
             winnerdiv.innerHTML = " ";
+            resetrow[i].style.backgroundColor="transparent";
         }
     }
 }
