@@ -93,8 +93,8 @@ function gameReset(){
         for(let i=0;i<resetrow.length;i++)   
         {
             resetrow[i].innerHTML = "";
-            winnerdiv.innerHTML = " ";
-            resetrow[i].style.backgroundColor=" ";
+           // winnerdiv.innerHTML = " ";
+            resetrow[i].style.backgroundColor="transparent";
         }
     }
 }
