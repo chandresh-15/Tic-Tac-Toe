@@ -16,8 +16,18 @@
             <h3>Player 2: <input type="text" id="player2"></h3>
             <button  type="submit" value="submit" style="background-color: green; padding:5px; padding-inline: 30px;" onclick="dellogin()">Start</button>
         </div>
+        <table  class="record">
+            <tr>
+                <th id="playerrecord1"></th>
+                <th id="playerrecord2"></th>
+            </tr>
+            <tr>
+                <th id="countx">0</th>
+                <th id="countO">0</th>
+            </tr>
+        </table>
         <div class="maindiv" >
-           Player1:<span id="countx">0</span>player2:<span id="countO">0</span>
+           <!-- Player1:<span id="countx">0</span>player2:<span id="countO">0</span> -->
             <div class="row">
                 <div class="column" id="0"></div >
                 <div class="column" id="1"></div >
@@ -29,8 +39,13 @@
                 <div class="column" id="7"></div >
                 <div class="column" id="8"></div >
             </div>
-            <h3  id="winner"></h3>
+            <!-- <h3  id="winner"></h3> -->
             <button onclick="gameReset()">Reset</button>
+            <button onclick="restart()">Restart</button>
+            <button onclick="resetcount()">Reset Count</button>
+        </div>
+        <div class="showwinner">
+            <h3  id="winner"></h3>
         </div>
         <script src="js/tictactoe.js"></script>
 </body>

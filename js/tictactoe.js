@@ -7,13 +7,25 @@ var winnerdiv = document.querySelector("#winner");
 
 function dellogin()
 {
-    document.querySelector(".login").style = "display:none;";
-    document.querySelector(".maindiv").style = "display: block";
+    user1 = document.querySelector("#player1").value;
+    user2 = document.querySelector("#player2").value;
+    if(user1 =="" || user2=="")
+    {
+        alert("Please Fill Players To Start The Game ");
+    }
+    else{
+        document.querySelector(".login").style = "display:none;";
+        document.querySelector(".maindiv").style = "display: block";
+        document.querySelector(".record").style = "display: block";
+        
+    }
+    setname();
 }
 
 document.querySelector(".row").addEventListener("click",function(e){
     if(e.target.id)
         setVal(e.target); //creating a function which takes id as a parameter;
+        
 })
 
 //setval function which evalutes x and o 
@@ -60,6 +72,7 @@ function checkwinner(type){
         winnerdiv.innerHTML=type?"Winner X ":"winner O";
         setwinner(winnerindexs[i]);
         setDisable();
+    
         countforpoints(type);
         break;
        }
@@ -96,14 +109,36 @@ function gameReset(){
            // winnerdiv.innerHTML = " ";
             resetrow[i].style.backgroundColor="transparent";
         }
+        document.querySelector(".showwinner").style.display = "none";
     }
 }
 function countforpoints(type)
 {
    (type)? countx++ : countO++;
+   document.querySelector(".showwinner").style.display = "block";
     document.querySelector("#countx").innerHTML=countx;
     document.querySelector("#countO").innerHTML=countO;
 }
 
+function restart()
+{
+    var reloadgame = confirm("Are You Sure You Want to Reload the Game");
+    if(reloadgame)
+    location.reload();
+}
+function setname(){
+     let player1 = document.querySelector("#player1").value;
+     let player2 = document.querySelector("#player2").value;
+     document.querySelector("#playerrecord1").innerHTML = player1;
+     document.querySelector("#playerrecord2").innerHTML = player2;
+}
 
+function resetcount(){
+    var resetgamecount = confirm("Are You Sure You Want to reset the count");
+    if(resetgamecount)
+    {
+    document.querySelector("#countx").innerHTML="0";
+    document.querySelector("#countO").innerHTML="0";
+    }
+}
 
