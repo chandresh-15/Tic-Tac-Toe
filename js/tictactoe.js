@@ -4,6 +4,8 @@ var countx = 0,countO = 0;
 var check = true;  // toggle the X and O 
 var positions = [1,0,1,0,1,0,0,1,0]; //stores the value in an array. 
 var winnerdiv = document.querySelector("#winner");
+var play1 = document.querySelector("#player1");
+var play2 = document.querySelector("#player2");
 
 function dellogin()
 {
@@ -69,7 +71,7 @@ function checkwinner(type){
         let [a,b,c] = winnerindexs[i];
        if((positions[a]==positions[b]) && (positions[b]==positions[c]))
        {
-        winnerdiv.innerHTML=type?"Winner X ":"winner O";
+        winnerdiv.innerHTML=type? `Winner is ${play1.value}`:`Winner is ${play2.value}`;
         setwinner(winnerindexs[i]);
         setDisable();
     
